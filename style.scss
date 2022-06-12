@@ -1,0 +1,293 @@
+/*----------------------------------------------------------------------------------------------------*\
+        COMMAND
+\*----------------------------------------------------------------------------------------------------*/
+/*
+./dart-sass/sass style.scss style.css --watch
+*/
+/*----------------------------------------------------------------------------------------------------*\
+        GLOBAL
+\*----------------------------------------------------------------------------------------------------*/
+* {
+    font-family: "quicksand", sans-serif;
+    padding: 0;
+    margin: 0;
+    color: white;
+    border: white;
+    background-color: black;
+}
+.menu-div {
+    padding-top: 3em;
+    padding-bottom: 3em ;
+}
+.body {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.hidden {
+    display: none;
+}
+input[type = number] {
+    -moz-appearance: textfield;
+}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+button:hover {
+    cursor: pointer;
+}
+/*----------------------------------------------------------------------------------------------------*\
+        TITLE
+\*----------------------------------------------------------------------------------------------------*/
+.title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-stretch: 50%;
+    // padding-top: 1.5%;
+    // padding-bottom: 1.5%;
+    font-family: "quicksand", sans-serif;
+}
+/*----------------------------------------------------------------------------------------------------*\
+        NAMES
+\*----------------------------------------------------------------------------------------------------*/
+.div-inputs-names {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    .yellow-input {
+        width: 25%;
+        border: solid 2px white;
+        border-radius: 30px;
+        height: 50px;
+        background-color: yellow;
+        color: black;
+        text-align: center;
+    }
+    .red-input {
+        color: black;
+        width: 25%;
+        border: solid 2px white;
+        border-radius: 30px;
+        height: 50px;
+        background-color: red;
+        text-align: center;
+    }
+}
+/*----------------------------------------------------------------------------------------------------*\
+        START BUTTON
+\*----------------------------------------------------------------------------------------------------*/
+.div-start-button {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    justify-content: center;
+}
+.start-button {
+    width: 15%;
+    border-radius: 20px;
+    background-color: blue;
+    color: white;
+    height: 70px;
+    font-size: center;
+    border: solid 2px white;
+}
+.div-dimension {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.names-label {
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    text-align: center;
+}
+.dimensions-label {
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    text-align: center;
+}
+.columns-input {
+    height: 50px;
+    width: 15%;
+    text-align: center;
+    border: solid 3px white;
+    border-radius: 20px;
+}
+.rows-input {
+    height: 50px;
+    width: 15%;
+    text-align: center;
+    border: solid 3px white;
+    border-radius: 20px;
+}
+.clear-dimensions {
+    height: 50px;
+    width: 15%;
+    text-align: center;
+    border: solid 3px white;
+    border-radius: 20px;
+}
+.clear-names {
+    height: 50px;
+    width: 15%;
+    text-align: center;
+    border: solid 3px white;
+    border-radius: 20px;
+}
+.clear-names-button-div {
+    display: flex;
+    justify-content: center;
+}
+.clear-dimensions-button-div {
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+/*----------------------------------------------------------------------------------------------------*\
+        MENU BUTTON
+\*----------------------------------------------------------------------------------------------------*/
+.div-menu-button {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-button {
+    width: 15%;
+    border-radius: 20px;
+    background-color: blue;
+    color: white;
+    height: 70px;
+    font-size: center;
+    border: solid 2px;
+}
+/*----------------------------------------------------------------------------------------------------*\
+        GAME DIV
+\*----------------------------------------------------------------------------------------------------*/
+.game-div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#game {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+.cell {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    // background-color: white;
+    margin: 5px;
+    display: inline-block;
+    border: solid 2px white;
+}
+@for $i from 1 through 25 {
+    .column-#{$i} {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.yellow {
+    background-color: yellow;
+}
+.red {
+    background-color: red;
+}
+@for $i from 1 through 25 {
+    .column-#{$i}:hover {
+        cursor: pointer;
+    }
+}
+.message {
+    display: flex;
+    justify-content: center;
+}
+.revenge-button {
+    width: 15%;
+    border-radius: 20px;
+    background-color: blue;
+    color: white;
+    height: 70px;
+    font-size: center;
+    border: solid 2px white;
+}
+.undo-button {
+    width: 15%;
+    border-radius: 20px;
+    background-color: blue;
+    color: white;
+    height: 70px;
+    font-size: center;
+    border: solid 2px white;
+}
+.choice {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+.win-div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.score {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+.red-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+}
+.yellow-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: yellow;
+}
+.replay-button {
+    width: 15%;
+    border-radius: 20px;
+    background-color: blue;
+    color: white;
+    height: 70px;
+    font-size: center;
+    border: solid 2px white;
+}
+@keyframes fall {
+    0% {
+      opacity: 1;
+      transform: translateY(-500px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+.cell.red, .cell.yellow {
+    animation: fall 2s ease 0s 1 normal forwards;
+    animation-duration: 0.5s;
+}

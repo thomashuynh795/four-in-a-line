@@ -1,0 +1,541 @@
+/*----------------------------------------------------------------------------------------------------*\
+        COMMAND
+\*----------------------------------------------------------------------------------------------------*/
+/*
+./dart-sass/sass style.scss style.css --watch
+*/
+/*----------------------------------------------------------------------------------------------------*\
+        GLOBAL
+\*----------------------------------------------------------------------------------------------------*/
+* {
+  font-family: "quicksand", sans-serif;
+  padding: 0;
+  margin: 0;
+  color: white;
+  border: white;
+  background-color: black;
+}
+
+.menu-div {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+.body {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.hidden {
+  display: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/*----------------------------------------------------------------------------------------------------*\
+        TITLE
+\*----------------------------------------------------------------------------------------------------*/
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-stretch: 50%;
+  font-family: "quicksand", sans-serif;
+}
+
+/*----------------------------------------------------------------------------------------------------*\
+        NAMES
+\*----------------------------------------------------------------------------------------------------*/
+.div-inputs-names {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+.div-inputs-names .yellow-input {
+  width: 25%;
+  border: solid 2px white;
+  border-radius: 30px;
+  height: 50px;
+  background-color: yellow;
+  color: black;
+  text-align: center;
+}
+.div-inputs-names .red-input {
+  color: black;
+  width: 25%;
+  border: solid 2px white;
+  border-radius: 30px;
+  height: 50px;
+  background-color: red;
+  text-align: center;
+}
+
+/*----------------------------------------------------------------------------------------------------*\
+        START BUTTON
+\*----------------------------------------------------------------------------------------------------*/
+.div-start-button {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  display: flex;
+  justify-content: center;
+}
+
+.start-button {
+  width: 15%;
+  border-radius: 20px;
+  background-color: blue;
+  color: white;
+  height: 70px;
+  font-size: center;
+  border: solid 2px white;
+}
+
+.div-dimension {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.names-label {
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  text-align: center;
+}
+
+.dimensions-label {
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  text-align: center;
+}
+
+.columns-input {
+  height: 50px;
+  width: 15%;
+  text-align: center;
+  border: solid 3px white;
+  border-radius: 20px;
+}
+
+.rows-input {
+  height: 50px;
+  width: 15%;
+  text-align: center;
+  border: solid 3px white;
+  border-radius: 20px;
+}
+
+.clear-dimensions {
+  height: 50px;
+  width: 15%;
+  text-align: center;
+  border: solid 3px white;
+  border-radius: 20px;
+}
+
+.clear-names {
+  height: 50px;
+  width: 15%;
+  text-align: center;
+  border: solid 3px white;
+  border-radius: 20px;
+}
+
+.clear-names-button-div {
+  display: flex;
+  justify-content: center;
+}
+
+.clear-dimensions-button-div {
+  display: flex;
+  justify-content: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+/*----------------------------------------------------------------------------------------------------*\
+        MENU BUTTON
+\*----------------------------------------------------------------------------------------------------*/
+.div-menu-button {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-button {
+  width: 15%;
+  border-radius: 20px;
+  background-color: blue;
+  color: white;
+  height: 70px;
+  font-size: center;
+  border: solid 2px;
+}
+
+/*----------------------------------------------------------------------------------------------------*\
+        GAME DIV
+\*----------------------------------------------------------------------------------------------------*/
+.game-div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#game {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 5px;
+  display: inline-block;
+  border: solid 2px white;
+}
+
+.column-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-4 {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-5 {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-6 {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-7 {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-8 {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-9 {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-10 {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-11 {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-12 {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-13 {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-14 {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-15 {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-16 {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-17 {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-18 {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-19 {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-20 {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-21 {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-22 {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-23 {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-24 {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-25 {
+  display: flex;
+  flex-direction: column;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.red {
+  background-color: red;
+}
+
+.column-1:hover {
+  cursor: pointer;
+}
+
+.column-2:hover {
+  cursor: pointer;
+}
+
+.column-3:hover {
+  cursor: pointer;
+}
+
+.column-4:hover {
+  cursor: pointer;
+}
+
+.column-5:hover {
+  cursor: pointer;
+}
+
+.column-6:hover {
+  cursor: pointer;
+}
+
+.column-7:hover {
+  cursor: pointer;
+}
+
+.column-8:hover {
+  cursor: pointer;
+}
+
+.column-9:hover {
+  cursor: pointer;
+}
+
+.column-10:hover {
+  cursor: pointer;
+}
+
+.column-11:hover {
+  cursor: pointer;
+}
+
+.column-12:hover {
+  cursor: pointer;
+}
+
+.column-13:hover {
+  cursor: pointer;
+}
+
+.column-14:hover {
+  cursor: pointer;
+}
+
+.column-15:hover {
+  cursor: pointer;
+}
+
+.column-16:hover {
+  cursor: pointer;
+}
+
+.column-17:hover {
+  cursor: pointer;
+}
+
+.column-18:hover {
+  cursor: pointer;
+}
+
+.column-19:hover {
+  cursor: pointer;
+}
+
+.column-20:hover {
+  cursor: pointer;
+}
+
+.column-21:hover {
+  cursor: pointer;
+}
+
+.column-22:hover {
+  cursor: pointer;
+}
+
+.column-23:hover {
+  cursor: pointer;
+}
+
+.column-24:hover {
+  cursor: pointer;
+}
+
+.column-25:hover {
+  cursor: pointer;
+}
+
+.message {
+  display: flex;
+  justify-content: center;
+}
+
+.revenge-button {
+  width: 15%;
+  border-radius: 20px;
+  background-color: blue;
+  color: white;
+  height: 70px;
+  font-size: center;
+  border: solid 2px white;
+}
+
+.undo-button {
+  width: 15%;
+  border-radius: 20px;
+  background-color: blue;
+  color: white;
+  height: 70px;
+  font-size: center;
+  border: solid 2px white;
+}
+
+.choice {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+.win-div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.score {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+}
+
+.red-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.yellow-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: yellow;
+}
+
+.replay-button {
+  width: 15%;
+  border-radius: 20px;
+  background-color: blue;
+  color: white;
+  height: 70px;
+  font-size: center;
+  border: solid 2px white;
+}
+
+@keyframes fall {
+  0% {
+    opacity: 1;
+    transform: translateY(-500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.cell.red, .cell.yellow {
+  animation: fall 2s ease 0s 1 normal forwards;
+  animation-duration: 0.5s;
+}
+
+/*# sourceMappingURL=style.css.map */
